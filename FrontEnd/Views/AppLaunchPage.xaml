@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:FrontEnd.ViewModel"
+             x:DataType="viewModels:AppLaunchPageViewModel"
+             x:Class="FrontEnd.Views.AppLaunchPage"
+             Title="AppLaunchPage">
+    <VerticalStackLayout>
+        <Image x:Name="igame" Source="Images\appiconnew.png" HeightRequest="50" WidthRequest="50">
+            
+        </Image>
+        
+        
+        <Label
+            Text="Cinner"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontFamily=""/>
+
+        <Button Text="Start Cinnin" Command="{Binding NavigateToIndexPageCommand}"/>
+    </VerticalStackLayout>
+</ContentPage>

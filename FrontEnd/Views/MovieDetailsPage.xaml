@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEnd.Views.MovieDetailsPage"
+             x:DataType="viewModels:MovieDetailsPageViewModel"
+             xmlns:viewModels="clr-namespace:FrontEnd.ViewModel"
+             xmlns:models="clr-namespace:FrontEnd.Model.Results"
+             
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             
+             Title="{Binding MovieDetails.Title}">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="FavoriteButton" Clicked="FavoriteButton_Clicked" IconImageSource="star.svg"/>
+    </ContentPage.ToolbarItems>
+
+
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <ImageButton Margin="5,5,5,5" Source="{Binding MovieDetails.PosterPath, StringFormat=https://image.tmdb.org/t/p/w780{0}}">
+
+            </ImageButton>
+
+            <Label Margin="10" FontSize="Medium" Text="{Binding MovieDetails.Title}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+            <HorizontalStackLayout>
+                <!--Add all labels with genres-->
+            </HorizontalStackLayout>
+
+            <Label Text="{Binding MovieDetails.Overview}" FontAttributes="Italic" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+            <Label Text="Release Date" Margin="10" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            
+            <Label Text="{Binding MovieDetails.ReleaseDate}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+            <Label Text="Trailer" Margin="10" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+
+            <WebView Source="{Binding MovieTrailer}" HeightRequest="300"/>
+
+            <!--Does not work with youtube (Youtube´s fault)-->
+            <!--<toolkit:MediaElement x:Name="mediaElement"
+                      ShouldAutoPlay="True"
+                      ShouldShowPlaybackControls="True"
+                      Source="{Binding MovieTrailer}"
+                      HeightRequest="300"
+                      WidthRequest="400"
+                      />-->
+
+
+            <Label Text="Images" Margin="10" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+            <CollectionView x:Name="ImagesCollection" ItemsSource="{Binding MovieImages}" ItemsLayout="VerticalGrid, 1">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Backdrop">
+                        <Frame Padding="0">
+                            <VerticalStackLayout>
+                                <!--bugaso-->
+                                <ImageButton HeightRequest="270" Margin="5,5,5,5" Source="{Binding file_path, StringFormat=https://image.tmdb.org/t/p/w780{0}}">
+
+                                </ImageButton>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+    
+    
+</ContentPage>

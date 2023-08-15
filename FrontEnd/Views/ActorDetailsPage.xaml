@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEnd.Views.ActorDetailsPage"
+             x:DataType="viewModels:ActorDetailsPageViewModel"
+             xmlns:viewModels="clr-namespace:FrontEnd.ViewModel"
+             xmlns:models="clr-namespace:FrontEnd.Model.Results"
+             Title="{Binding ActorDetails1.Name}">
+
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <ImageButton Margin="5,5,5,5" Source="{Binding ActorDetails1.ProfilePath, StringFormat=https://image.tmdb.org/t/p/w780{0}}">
+
+            </ImageButton>
+
+            <Label Margin="10" FontSize="Medium" Text="{Binding ActorDetails1.Name}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+            <!--More black magic please ignore-->
+            <Label x:Name="NavigationLabel" Text="{Binding NavigationId2}" PropertyChanged="NavigationLabel_PropertyChanged" IsVisible="false" HeightRequest="0"/>
+
+
+            <HorizontalStackLayout>
+                <Label Text="{Binding ActorDetails1.Birthday}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="{Binding ActorDetails1.Deathday, StringFormat= - {0}}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </HorizontalStackLayout>
+            
+            
+            <Label Text="{Binding ActorDetails1.Biography}" FontAttributes="Italic" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+
+            <Label Text="Images" Margin="10" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+            <!--Put Images Here-->
+
+            <CollectionView x:Name="ProfileCollection" ItemsSource="{Binding ActorImages}" ItemsLayout="VerticalGrid, 2">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Profile">
+                        <Frame Padding="0">
+                            <VerticalStackLayout>
+                                <!--bugaso-->
+                                <ImageButton HeightRequest="270" Margin="5,5,5,5" Source="{Binding file_path, StringFormat=https://image.tmdb.org/t/p/w780{0}}">
+
+                                </ImageButton>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label Text="Known for" Margin="10" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            
+            <!--Put Movies Here-->
+
+            <CollectionView x:Name="KnownForCollection" ItemsSource="{Binding CastedInCollection}" ItemsLayout="VerticalGrid, 2">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Cast">
+                        <Frame Padding="0">
+
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:ActorDetailsPageViewModel}}, Path=NavigateToMovieDetailStringCommand}" CommandParameter="{Binding id}"/>
+                            </Frame.GestureRecognizers>
+
+
+                            <VerticalStackLayout>
+
+                                <!--bugaso-->
+                                <ImageButton HeightRequest="140" Margin="5,5,5,5" Source="{Binding backdrop_path, StringFormat=https://image.tmdb.org/t/p/w780{0}}">
+
+                                </ImageButton>
+
+                                <Label Text="{Binding title}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                <Label Text="Character:" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding character}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Italic"/>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\discover.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\discover@2x.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\discover@3x.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\dotnet_bot.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\dotnet_bot@2x.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\dotnet_bot@3x.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\redcinemaframe.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\redcinemaframe@2x.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\redcinemaframe@3x.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\appiconnew.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\redcinemaframedefinitive.jpg" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\redlogo.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\red_cinema_frame_definitive.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\search.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\search@2x.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\search@3x.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\star.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\star@2x.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\star@3x.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\starfilled.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\starfilled@2x.png" />
+    <BundleResource Include="C:\Users\Edrian\Documents\GitHub\Ciner\FrontEnd\obj\Release\net7.0-maccatalyst\resizetizer\r\starfilled@3x.png" />
+    <BundleResource Include="obj\Release\net7.0-maccatalyst\resizetizer\f\OpenSans-Regular.ttf" />
+    <BundleResource Include="obj\Release\net7.0-maccatalyst\resizetizer\f\OpenSans-Semibold.ttf" />
+  </ItemGroup>
+</Project>

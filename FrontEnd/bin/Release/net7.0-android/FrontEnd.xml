@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FrontEnd</name>
+    </assembly>
+    <members>
+        <member name="T:FrontEnd.ViewModel.ActorDetailsPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:FrontEnd.ViewModel.ActorDetailsPageViewModel.ActorDetails1">
+            <inheritdoc cref="F:FrontEnd.ViewModel.ActorDetailsPageViewModel.actorDetails1"/>
+        </member>
+        <member name="P:FrontEnd.ViewModel.ActorDetailsPageViewModel.ActorImages">
+            <inheritdoc cref="F:FrontEnd.ViewModel.ActorDetailsPageViewModel.actorImages"/>
+        </member>
+        <member name="P:FrontEnd.ViewModel.ActorDetailsPageViewModel.CastedInCollection">
+            <inheritdoc cref="F:FrontEnd.ViewModel.ActorDetailsPageViewModel.castedInCollection"/>
+        </member>
+        <member name="P:FrontEnd.ViewModel.ActorDetailsPageViewModel.NavigationId2">
+            <inheritdoc cref="F:FrontEnd.ViewModel.ActorDetailsPageViewModel.navigationId2"/>
+        </member>
+        <member name="F:FrontEnd.ViewModel.ActorDetailsPageViewModel.loadActorDetailsCommand">
+            <summary>The backing field for <see cref="P:FrontEnd.ViewModel.ActorDetailsPageViewModel.LoadActorDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:FrontEnd.ViewModel.ActorDetailsPageViewModel.LoadActorDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:FrontEnd.ViewModel.ActorDetailsPageViewModel.LoadActorDetails(System.String)"/>.</summary>
+        </member>
+        <member name="F:FrontEnd.ViewModel.ActorDetailsPageViewModel.loadActorImagesCommand">
+            <summary>The backing field for <see cref="P:FrontEnd.ViewModel.ActorDetailsPageViewModel.LoadActorImagesCommand"/>.</summary>
+        </member>
+        <member name="P:FrontEnd.ViewModel.ActorDetailsPageViewModel.LoadActorImagesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:FrontEnd.ViewModel.ActorDetailsPageViewModel.LoadActorImages(System.String)"/>.</summary>
+        </member>
+        <member name="F:FrontEnd.ViewModel.ActorDetailsPageViewModel.loadCastDetailsCommand">
+            <summary>The backing field for <see cref="P:FrontEnd.ViewModel.ActorDetailsPageViewModel.LoadCastDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:FrontEnd.ViewModel.ActorDetailsPageViewModel.LoadCastDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:FrontEnd.ViewModel.ActorDetailsPageViewModel.LoadCastDetails(System.String)"/>.</summary>
+        </member>
+        <member name="F:FrontEnd.ViewModel.ActorDetailsPageViewModel.navigateToMovieDetailStringCommand">
+            <summary>The backing field for <see cref="P:FrontEnd.ViewModel.ActorDetailsPageViewModel.NavigateToMovieDetailStringCommand"/>.</summary>
+        </member>
+        <member name="P:FrontEnd.ViewModel.ActorDetailsPageViewModel.NavigateToMovieDetailStringCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:FrontEnd.ViewModel.ActorDetailsPageViewModel.NavigateToMovieDetailString(System.Int64)"/>.</summary>
+        </member>
+        <member name="T:FrontEnd.ViewModel.AppLaunchPageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="F:FrontEnd.ViewModel.AppLaunchPageViewModel.navigateToIndexPageCommand">
+            <summary>The backing field for <see cref="P:FrontEnd.ViewModel.AppLaunchPageViewModel.NavigateToIndexPageCommand"/>.</summary>
+        </member>
+        <member name="P:FrontEnd.ViewModel.AppLaunchPageViewModel.NavigateToIndexPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FrontEnd.ViewModel.AppLaunchPageViewModel.NavigateToIndexPage"/>.</summary>
+        </member>
+        <member name="T:FrontEnd.ViewModel.IndexPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:FrontEnd.ViewModel.IndexPageViewModel.NavigationId2">
+            <inheritdoc cref="F:FrontEnd.ViewModel.IndexPageViewModel.navigationId2"/>
+        </member>
+        <member name="F:FrontEnd.ViewModel.IndexPageViewModel.loadDiscoverMoviesCommand">
+            <summary>The backing field for <see cref="P:FrontEnd.ViewModel.IndexPageViewModel.LoadDiscoverMoviesCommand"/>.</summary>
+        </member>
+        <member name="P:FrontEnd.ViewModel.IndexPageViewModel.LoadDiscoverMoviesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FrontEnd.ViewModel.IndexPageViewModel.LoadDiscoverMovies"/>.</summary>
+        </member>
+        <member name="F:FrontEnd.ViewModel.IndexPageViewModel.searchCommand">
+            <summary>The backing field for <see cref="P:FrontEnd.ViewModel.IndexPageViewModel.SearchCommand"/>.</summary>
+        </member>
+        <member name="P:FrontEnd.ViewModel.IndexPageViewModel.SearchCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:FrontEnd.ViewModel.IndexPageViewModel.Search(System.Collections.Generic.IDictionary{System.String,System.String})"/>.</summary>
+        </member>
+        <member name="F:FrontEnd.ViewModel.IndexPageViewModel.loadFavoritesCommand">
+            <summary>The backing field for <see cref="P:FrontEnd.ViewModel.IndexPageViewModel.LoadFavoritesCommand"/>.</summary>
+        </member>
+        <member name="P:FrontEnd.ViewModel.IndexPageViewModel.LoadFavoritesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FrontEnd.ViewModel.IndexPageViewModel.LoadFavorites"/>.</summary>
+        </member>
+        <member name="F:FrontEnd.ViewModel.IndexPageViewModel.navigateToMovieDetailCommand">
+            <summary>The backing field for <see cref="P:FrontEnd.ViewModel.IndexPageViewModel.NavigateToMovieDetailCommand"/>.</summary>
+        </member>
+        <member name="P:FrontEnd.ViewModel.IndexPageViewModel.NavigateToMovieDetailCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:FrontEnd.ViewModel.IndexPageViewModel.NavigateToMovieDetail(FrontEnd.Model.Results.ResultDiscoverMovies)"/>.</summary>
+        </member>
+        <member name="F:FrontEnd.ViewModel.IndexPageViewModel.navigateToMovieDetailStringCommand">
+            <summary>The backing field for <see cref="P:FrontEnd.ViewModel.IndexPageViewModel.NavigateToMovieDetailStringCommand"/>.</summary>
+        </member>
+        <member name="P:FrontEnd.ViewModel.IndexPageViewModel.NavigateToMovieDetailStringCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:FrontEnd.ViewModel.IndexPageViewModel.NavigateToMovieDetailString(System.Int64)"/>.</summary>
+        </member>
+        <member name="F:FrontEnd.ViewModel.IndexPageViewModel.navigateToActorDetailCommand">
+            <summary>The backing field for <see cref="P:FrontEnd.ViewModel.IndexPageViewModel.NavigateToActorDetailCommand"/>.</summary>
+        </member>
+        <member name="P:FrontEnd.ViewModel.IndexPageViewModel.NavigateToActorDetailCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:FrontEnd.ViewModel.IndexPageViewModel.NavigateToActorDetail(FrontEnd.Model.Results.ResultSearchPerson)"/>.</summary>
+        </member>
+        <member name="T:FrontEnd.ViewModel.MovieDetailsPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:FrontEnd.ViewModel.MovieDetailsPageViewModel.MovieDetails">
+            <inheritdoc cref="F:FrontEnd.ViewModel.MovieDetailsPageViewModel.movieDetails"/>
+        </member>
+        <member name="P:FrontEnd.ViewModel.MovieDetailsPageViewModel.MovieTrailer">
+            <inheritdoc cref="F:FrontEnd.ViewModel.MovieDetailsPageViewModel.movieTrailer"/>
+        </member>
+        <member name="P:FrontEnd.ViewModel.MovieDetailsPageViewModel.MovieImages">
+            <inheritdoc cref="F:FrontEnd.ViewModel.MovieDetailsPageViewModel.movieImages"/>
+        </member>
+        <member name="F:FrontEnd.ViewModel.MovieDetailsPageViewModel.loadMovieDetailsCommand">
+            <summary>The backing field for <see cref="P:FrontEnd.ViewModel.MovieDetailsPageViewModel.LoadMovieDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:FrontEnd.ViewModel.MovieDetailsPageViewModel.LoadMovieDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:FrontEnd.ViewModel.MovieDetailsPageViewModel.LoadMovieDetails(System.String)"/>.</summary>
+        </member>
+        <member name="F:FrontEnd.ViewModel.MovieDetailsPageViewModel.loadMovieTrailerCommand">
+            <summary>The backing field for <see cref="P:FrontEnd.ViewModel.MovieDetailsPageViewModel.LoadMovieTrailerCommand"/>.</summary>
+        </member>
+        <member name="P:FrontEnd.ViewModel.MovieDetailsPageViewModel.LoadMovieTrailerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:FrontEnd.ViewModel.MovieDetailsPageViewModel.LoadMovieTrailer(System.String)"/>.</summary>
+        </member>
+        <member name="F:FrontEnd.ViewModel.MovieDetailsPageViewModel.loadMovieImagesCommand">
+            <summary>The backing field for <see cref="P:FrontEnd.ViewModel.MovieDetailsPageViewModel.LoadMovieImagesCommand"/>.</summary>
+        </member>
+        <member name="P:FrontEnd.ViewModel.MovieDetailsPageViewModel.LoadMovieImagesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:FrontEnd.ViewModel.MovieDetailsPageViewModel.LoadMovieImages(System.String)"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ActorDetails1">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ActorDetails1" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ActorImages">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ActorImages" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CastedInCollection">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CastedInCollection" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NavigationId2">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NavigationId2" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MovieDetails">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MovieDetails" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MovieTrailer">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MovieTrailer" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MovieImages">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MovieImages" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ActorDetails1">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ActorDetails1" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ActorImages">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ActorImages" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CastedInCollection">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CastedInCollection" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NavigationId2">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NavigationId2" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MovieDetails">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MovieDetails" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MovieTrailer">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MovieTrailer" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MovieImages">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MovieImages" generated properties.</summary>
+        </member>
+    </members>
+</doc>

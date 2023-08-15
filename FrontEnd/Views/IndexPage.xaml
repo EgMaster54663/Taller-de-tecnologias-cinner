@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:FrontEnd.ViewModel"
+             xmlns:models="clr-namespace:FrontEnd.Model.Results"
+             x:Class="FrontEnd.Views.IndexPage"
+             x:DataType="viewModels:IndexPageViewModel"
+             Title="Cinner"
+
+            
+             Routing.Route="IndexPage"
+             CurrentPageChanged="TabbedPage_CurrentPageChanged">
+
+
+    <!--Favorites page-->
+    <ContentPage x:Name="Favorites" Title="Favorites" IconImageSource="star.svg">
+
+        <CollectionView x:Name="FavoritesCollection" ItemsSource="{Binding movieFavoritesCol}" ItemsLayout="VerticalGrid, 2">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:MovieDetails">
+                    <Frame Padding="0">
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:IndexPageViewModel}}, Path=NavigateToMovieDetailStringCommand}" CommandParameter="{Binding Id}"/>
+                        </Frame.GestureRecognizers>
+
+                        <VerticalStackLayout>
+
+                            
+                            <ImageButton HeightRequest="270" Margin="5,5,5,5" Source="{Binding PosterPath, StringFormat=https://image.tmdb.org/t/p/w780{0}}">
+
+                            </ImageButton>
+
+
+
+                            <Label Text="{Binding Title}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+
+
+                        </VerticalStackLayout>
+
+                    </Frame>
+
+                </DataTemplate>
+
+
+            </CollectionView.ItemTemplate>
+
+
+        </CollectionView>
+
+
+    </ContentPage>
+
+
+    <!--Discover Page-->
+    <ContentPage Title="Discover" IconImageSource="discover.svg">
+
+        
+        
+        <CollectionView x:Name="DiscoverCollection" ItemsSource="{Binding discoverMovies}" ItemsLayout="VerticalGrid, 2">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:ResultDiscoverMovies">
+                    <Frame Padding="0">
+                        
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:IndexPageViewModel}}, Path=NavigateToMovieDetailCommand}" CommandParameter="{Binding .}"/>
+                        </Frame.GestureRecognizers>
+                        
+                        <VerticalStackLayout>
+
+                            <!--bugaso-->
+                            <ImageButton HeightRequest="270" Margin="5,5,5,5" Source="{Binding PosterPath, StringFormat=https://image.tmdb.org/t/p/w780{0}}">
+
+                            </ImageButton>
+
+                            
+                            
+                            <Label Text="{Binding Title}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                            
+                            
+                        </VerticalStackLayout>
+                        
+                    </Frame>
+                    
+                </DataTemplate>
+
+                
+            </CollectionView.ItemTemplate>
+
+
+        </CollectionView>
+
+    </ContentPage>
+
+
+    <!--Search Page-->
+    <ContentPage Title="Search" IconImageSource="search.svg">
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--Pure black magic please ignore-->
+            <Label x:Name="NavigationLabel" Text="{Binding NavigationId2}" PropertyChanged="NavigationLabel_PropertyChanged" IsVisible="false" HeightRequest="0"/>
+
+            <!--Search Bar-->
+            <Entry x:Name="SearchBar" Grid.Row="0" HorizontalOptions="Fill"  Placeholder="Search">
+
+            </Entry>
+
+            <Button Grid.Row="0" WidthRequest="50" BackgroundColor="White" ImageSource="search.svg" HorizontalOptions="End" Clicked="Button_Clicked">
+
+            </Button>
+
+
+            <!--Filters-->
+            <HorizontalStackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand">
+                <!--Actor or Movie-->
+                <Picker Grid.Row="1" x:Name="FilterCategoryPicker" Title="Type" PropertyChanged="Picker_PropertyChanged">
+                    <Picker.Items>
+                        <x:String>Actor</x:String>
+                        <x:String>Movie</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <!--Movie Specific-->
+                <!--Release year-->
+                <Picker Grid.Row="1" x:Name="FilterDatePicker" Title="Release Year">
+
+                </Picker>
+
+            </HorizontalStackLayout>
+
+            <!--Results-->
+            <!--Actors Result-->
+            <CollectionView Grid.Row="2" x:Name="SearchCollectionPerson" ItemsSource="{Binding searchpersoncol}" ItemsLayout="VerticalGrid, 2" IsVisible="false">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:ResultSearchPerson">
+
+                        <Frame Padding="0">
+
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:IndexPageViewModel}}, Path=NavigateToActorDetailCommand}" CommandParameter="{Binding .}"/>
+                            </Frame.GestureRecognizers>
+
+
+                            <VerticalStackLayout>
+
+                                <!--bugaso-->
+                                <ImageButton HeightRequest="270" Margin="5,5,5,5" Source="{Binding ProfilePath, StringFormat=https://image.tmdb.org/t/p/w780{0}}">
+
+                                </ImageButton>
+
+                                <Label Text="{Binding Name}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                            </VerticalStackLayout>
+
+                        </Frame>
+
+                                
+                    </DataTemplate>
+
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+            <!--Movies result-->
+            <CollectionView Grid.Row="2" x:Name="SearchCollectionMovie" ItemsSource="{Binding searchmoviecol}" ItemsLayout="VerticalGrid, 2" IsVisible="false">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:ResultSearchMovies">
+
+                        <Frame Padding="0">
+
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:IndexPageViewModel}}, Path=NavigateToMovieDetailStringCommand}" CommandParameter="{Binding Id}"/>
+                            </Frame.GestureRecognizers>
+
+                            <VerticalStackLayout>
+                                <!--bugaso-->
+                                <ImageButton HeightRequest="270" Margin="5,5,5,5" Source="{Binding PosterPath, StringFormat=https://image.tmdb.org/t/p/w780{0}}">
+
+                                </ImageButton>
+
+                                <Label Text="{Binding Title}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                            </VerticalStackLayout>
+
+                        </Frame>
+                        
+                    </DataTemplate>
+
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+
+        </Grid>
+
+
+
+
+
+    </ContentPage>
+
+    
+</TabbedPage>
